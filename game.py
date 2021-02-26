@@ -27,6 +27,5 @@ def game(player):
             int(input("Press 1 to quit..."))
             if player == chr(49):
                 break
-        return player
 
 game(player = input("Rock,Paper,Scissors?"))
