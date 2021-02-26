@@ -1,10 +1,10 @@
 from random import randint
 #Randomize Rock, Paper, Scissors
-t = ["Rock", "Paper", "Scissors"]
+t = ["Rock","Paper", "Scissors"]
 computer = t[randint(0,2)]
 
 def game(player):
-    while player == True:
+    while player == False:
         if player == computer:
             print("Tie!")
         elif player == "Rock":
@@ -27,5 +27,6 @@ def game(player):
             int(input("Press 1 to quit..."))
             if player == chr(49):
                 break
+        return player
 
 game(player = input("Rock,Paper,Scissors?"))
