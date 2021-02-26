@@ -1,29 +1,40 @@
 from random import randint
-t = ["Rock", "Paper", "Scissors"]
-computer = t[randint(0,2)]
-def game(player):
-    while player == False:
-        if player == computer:
-            print("Tie!")
-        elif player == "Rock":
-            if computer == "Paper":
-                print("You lose!! " + computer + " covers " + player)
-            else:
-                print("You win!" + player + " smashes" + computer)
-        elif player == "Paper":
-            if computer == "Rock":
-                print("You win! " + player + " covers" + computer)
-            else:
-                print("You lose! " + computer + " smashes" + player)
-        elif player == "Scissors":
-            if computer == "Paper":
-                print("You win! " + player + " cuts" + computer)
-            else:
-                print("You lose! " + computer + " smashes" + player)
-        else:
-            print("Sorry that's not a valid play! Check your spelling")
-            int(input("Press 1 to quit..."))
-            if player == chr(49):
-                break
+def random_numer():
+  random_numer = randint(1,3)
+  if random_numer == 1:
+    print("Rock")
+  elif random_numer == 2: 
+    print("Paper")
+  elif random_numer == 3:
+    return 
+random_numer()
 
-game(False)
+player = str.upper(input("Rock, Paper, Scissors!? "))
+
+def game():
+    while player == False:
+      if player == random_numer:
+        print("It was a tie")
+      elif player == "Rock":
+        if random_numer == "Paper":
+          print("You lose! " + random_numer + " covers " + player)
+        else:
+          print("You win! " + player + " smashes " + random_numer)
+      elif player == "Paper":
+        if random_numer == "Rock":
+          print("You win! " + player + " covers " + random_numer)
+        else:
+          print("You lose! " + random_numer + " cuts " + player)
+      elif player == "Scissors":
+        if random_numer == "Paper":
+          print("You Win! " + player + " cuts " + random_numer)
+        else:
+          print("You lose! " + random_numer + " smashes " + player)
+      else:
+        print("Sorry invalid answer, check your spelling")
+        
+
+      
+      
+
+game()
